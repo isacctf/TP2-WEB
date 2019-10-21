@@ -13,3 +13,10 @@ window.addEventListener("click", function(e) {
     janelamodal.style.display = "none";
   }
 });
+let $nomes = $('.modal-content h3');
+$nomes.click(function(e) {
+  let $nome = $(e.currentTarget);
+  let $div = $nome.next(); // ← ← ←
+  $div.slideToggle();
+});
+$('.modal-content h3 + div').slideUp();
